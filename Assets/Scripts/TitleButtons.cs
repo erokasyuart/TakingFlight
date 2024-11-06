@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleButtons : MonoBehaviour
 {
@@ -10,9 +11,8 @@ public class TitleButtons : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayMain()
     {
-        
+        SceneManager.LoadScene("Level 1");
     }
 }
