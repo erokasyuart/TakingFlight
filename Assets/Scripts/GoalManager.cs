@@ -58,10 +58,11 @@ public class GoalManager : MonoBehaviour
         if (score < goals.Count)
         {
             goals[score].SetActive(true);
-        }
-        else
-        {
-            return;
+
+            if (score > 0)
+            {
+                goals[score - 1].SetActive(false);
+            }
         }
     }
 }
