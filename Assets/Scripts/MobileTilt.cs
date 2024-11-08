@@ -26,7 +26,4 @@ public class MobileTilt : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0, 0, -zRange);
     }
 
-    void FixedUpdate()
-    {
-    }
 }
