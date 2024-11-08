@@ -24,6 +24,7 @@ public class GoalManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -54,6 +55,13 @@ public class GoalManager : MonoBehaviour
 
     public void ShowNextGoal()
     {
-        goals[score].SetActive(true);
+        if (score < goals.Count)
+        {
+            goals[score].SetActive(true);
+        }
+        else
+        {
+            return;
+        }
     }
 }
