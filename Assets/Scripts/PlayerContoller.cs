@@ -25,6 +25,15 @@ public class PlayerContoller : MonoBehaviour
     {
         //zRange = Input.acceleration.x * speed;
 
+        if (transform.position.y < 30)
+        {
+            GoalManager.Instance.ShowScore("TOO BAD", "You got too low to the ground!");
+        }
+        else if (transform.position.y > 70)
+        {
+            GoalManager.Instance.ShowScore("TOO BAD", "You flew too close to the sun!");
+        }
+
         float tiltX = Mathf.Clamp(-Input.acceleration.x * tiltSenstivity, -1, 1);
         float tiltY = Mathf.Clamp(Input.acceleration.y * tiltSenstivity, -1, 1);
         float yaw = -tiltX * maxYaw;

@@ -12,8 +12,12 @@ public class GoalManager : MonoBehaviour
 
     [Header("Score UI")]
     [SerializeField] private GameObject scoreUI;
+    [SerializeField] private TextMeshProUGUI stateResponse; // win or lose
+    [SerializeField] private TextMeshProUGUI stateResponseShadow; // win or lose
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI scoreTextShadow;
+    [SerializeField] private TextMeshProUGUI feedbackText;
+    [SerializeField] private TextMeshProUGUI feedbackTextShadow;
 
 
 
@@ -27,8 +31,7 @@ public class GoalManager : MonoBehaviour
     {
         if (score == goals.Count)
         {
-            Time.timeScale = 0;
-            ShowScore();
+            ShowScore("WELL DONE", "Level Complete!");
         }
     }
 
@@ -37,11 +40,16 @@ public class GoalManager : MonoBehaviour
         score++;
     }
 
-    private void ShowScore()
+    public void ShowScore(string state, string feedback)
     {
+        Time.timeScale = 0;
         scoreUI.SetActive(true);
+        stateResponse.text = state;
+        stateResponseShadow.text = state;
         scoreText.text = score.ToString() + " / " + goals.Count;
         scoreTextShadow.text = score.ToString() + " / " + goals.Count;
+        feedbackText.text = feedback;
+        feedbackTextShadow.text = feedback;
     }
 
     public void ShowNextGoal()
