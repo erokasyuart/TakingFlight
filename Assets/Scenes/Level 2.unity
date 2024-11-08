@@ -1261,7 +1261,7 @@ GameObject:
   - component: {fileID: 418929797}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2705,7 +2705,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1961242065}
         m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -4027,12 +4027,12 @@ PrefabInstance:
     - target: {fileID: 6106740501628497913, guid: eda21db437af66a42a8be7a75d5c7bdf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.8
+      value: 52.8
       objectReference: {fileID: 0}
     - target: {fileID: 6106740501628497913, guid: eda21db437af66a42a8be7a75d5c7bdf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.2
+      value: 14.8
       objectReference: {fileID: 0}
     - target: {fileID: 6106740501628497913, guid: eda21db437af66a42a8be7a75d5c7bdf,
         type: 3}
@@ -4073,6 +4073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: goal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914239894537565507, guid: eda21db437af66a42a8be7a75d5c7bdf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5720,6 +5725,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943222022}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1961242064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961242066}
+  - component: {fileID: 1961242065}
+  m_Layer: 0
+  m_Name: UIButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1961242065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961242064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcb77155c7828a4fbca9f6d72b874ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1961242066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961242064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 160.24095, y: 163.6537, z: 4.6477966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984296613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5938,7 +5987,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1961242065}
         m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
@@ -6319,7 +6368,7 @@ PrefabInstance:
     - target: {fileID: 6106740501628497913, guid: eda21db437af66a42a8be7a75d5c7bdf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -36.2
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 6106740501628497913, guid: eda21db437af66a42a8be7a75d5c7bdf,
         type: 3}
@@ -6360,6 +6409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: goal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914239894537565507, guid: eda21db437af66a42a8be7a75d5c7bdf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6843,3 +6897,4 @@ SceneRoots:
   - {fileID: 1917306498}
   - {fileID: 20078778}
   - {fileID: 898977989}
+  - {fileID: 1961242066}
