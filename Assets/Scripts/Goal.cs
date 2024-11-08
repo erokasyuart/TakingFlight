@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    private bool hasTriggered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,11 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !hasTriggered)
         {
+            hasTriggered = true;
             GoalManager.Instance.AddScore();
+            GoalManager.Instance.ShowNextGoal();
         }
     }
 }

@@ -43,4 +43,9 @@ public class GoalManager : MonoBehaviour
         scoreText.text = score.ToString() + " / " + goals.Count;
         scoreTextShadow.text = score.ToString() + " / " + goals.Count;
     }
+
+    public void ShowNextGoal()
+    {
+        goals[score].SetActive(true);
+    }
 }
