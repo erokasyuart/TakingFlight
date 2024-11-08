@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class PlayerContoller : MonoBehaviour
 {
-    public float speed = 2.0f;
+    private float speed = 15.0f;
     //public float zRange = 40.0f;
-    public float tiltSenstivity = 15.0f;
-    public Rigidbody rb;
-    public Camera mainCamera;
+    private float turnSpeed = 25.0f;
+    private float tiltSenstivity = 25.0f;
+    private Quaternion targetRotation;
+    private Rigidbody rb;
+    [SerializeField]private Camera mainCamera;
+
+    private float maxYaw = 30.0f;
+    private float bankSmooth = 2.0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        targetRotation = transform.rotation;
     }
 
     void Update()
     {
         //zRange = Input.acceleration.x * speed;
 
-        float tiltX = Input.acceleration.x * tiltSenstivity;
-        float tiltY = Input.acceleration.y * tiltSenstivity;
+        float tiltX = Mathf.Clamp(-Input.acceleration.x * tiltSenstivity, -1, 1);
+        float tiltY = Mathf.Clamp(Input.acceleration.y * tiltSenstivity, -1, 1);
+        float yaw = -tiltX * maxYaw;
+        float pitch = tiltY * maxYaw;
+        float roll = -tiltX * 10f;
 
-        Quaternion targetRotation = Quaternion.Euler(tiltY, 0, -tiltX);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10.0f);
+        targetRotation = Quaternion.Euler(pitch, yaw, roll);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * bankSmooth);
+        
         rb.velocity = transform.forward * speed;
         CameraFollow();
     }
