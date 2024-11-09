@@ -33,6 +33,10 @@ public class PlayerContoller : MonoBehaviour
         {
             GoalManager.Instance.ShowScore("TOO BAD", "You flew too close to the sun!");
         }
+        else if (transform.position.x < -40 || transform.position.x > 40)
+        {
+            GoalManager.Instance.ShowScore("TOO BAD", "You flew too far off course!");
+        }
 
         float tiltX = Mathf.Clamp(-Input.acceleration.x * tiltSenstivity, -1, 1);
         float tiltY = Mathf.Clamp(Input.acceleration.y * tiltSenstivity, -1, 1);
