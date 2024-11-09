@@ -1,3 +1,6 @@
+/// <summary>
+/// Attached to the goal object, this script will show and hide goals as well as add to the player's score by calling the GoalManager
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +8,6 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     private bool hasTriggered = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {

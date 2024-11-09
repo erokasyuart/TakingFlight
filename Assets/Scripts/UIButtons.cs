@@ -1,3 +1,6 @@
+/// <summary>
+/// Manages the UI buttons in the levels
+/// </summary>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +10,11 @@ public class UIButtons : MonoBehaviour
 {
     public void NextLevel()
     {
-        //Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Loads the next level
     }
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reloads the current level
     }
 }
