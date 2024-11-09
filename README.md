@@ -15,6 +15,10 @@ This game uses the accelerometer on your mobile device to move the paper plane t
 
 # Changelog
 
+### v1.0.2
+- Fixed UI screen scaling for mobile devices for title screen and levels
+- Missing object bug has now been fixed
+
 ### v1.0.1
 - Removed adaptive performance package
 - Updated version text on title screen UI
