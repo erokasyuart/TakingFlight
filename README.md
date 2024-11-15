@@ -12,3 +12,23 @@ This game uses the accelerometer on your mobile device to move the paper plane t
 
 # Installation
 1. Download the apk file
+
+# Changelog
+
+### v1.0.2
+- Fixed UI screen scaling for mobile devices for title screen and levels
+- Missing object bug has now been fixed
+
+### v1.0.1
+- Removed adaptive performance package
+- Updated version text on title screen UI
+- Added application icon
+
+### v1.0 Release
+- Added basic gameplay function like gliding a paper plane by tilting the mobile device
+- Added goals for the player to direct their plane into to complete the level
+  - Goals will appear one at a time so it can guide the player to each goal
+- Title screen with flash fonts and an icon
+- 2 Levels for extended gameplay
+- Lose / Win level end screen
+- Paper plane asset
