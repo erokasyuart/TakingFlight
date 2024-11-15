@@ -8,8 +8,8 @@ using UnityEngine;
 public class PlayerContoller : MonoBehaviour
 {
     private float speed = 15.0f;
-    private float turnSpeed = 25.0f;
-    private float tiltSenstivity = 25.0f;
+    private float turnSpeed = 35.0f;
+    private float tiltSenstivity = 60.0f;
     private Quaternion targetRotation;
     private Rigidbody rb;
     [SerializeField]private Camera mainCamera;
