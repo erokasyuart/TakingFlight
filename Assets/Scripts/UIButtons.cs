@@ -17,4 +17,9 @@ public class UIButtons : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reloads the current level
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0); // Loads the main menu
+    }
 }
